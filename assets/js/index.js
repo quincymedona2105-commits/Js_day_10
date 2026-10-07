@@ -1,72 +1,63 @@
-// TASK 1 – LET
-console.log("TASK 1 – LET");
-let salary = 20000;
-console.log("Initial salary: " + salary);
-salary = 25000;
-console.log("Updated salary: " + salary);
+// TASK 1 – DOUBLE ALL NUMBERS
+console.log('TASK 1 – DOUBLE ALL NUMBERS');
+let numbers = [10, 20, 30, 40, 50];
+const data=numbers.map((e,i)=>{
+    return e*2;
+})
+console.log(data);
 
-// TASK 2 – CONST
-console.log("TASK 2 – CONST");
-const country = " India";
-console.log("My Country is" + country);
+// TASK 2 – GET EVEN NUMBERS
+console.log('TASK 2 – GET EVEN NUMBERS');
+let number = [10, 15, 20, 25, 30, 35, 40];
+const findEven=number.filter((e)=>{
+    return e%2===0;
+})
+console.log(findEven);
 
-// TASK 3 – TEMPLATE LITERAL
-console.log("TASK 3 – TEMPLATE LITERAL");
-let name = "Arun";
-let age = 25;
-console.log(`My name is ${name} and I am ${age} years old.`);
+// TASK 3 – FIND FIRST NUMBER
+console.log('TASK 3 – FIND FIRST NUMBER');
+let Numbers = [10, 25, 35, 50, 60];
+const findFirst=Numbers.find((e)=>{
+    return e>25;
+})
+console.log(findFirst);
 
-// TASK 4 – TEMPLATE LITERAL CALCULATION
-console.log("TASK 4 – TEMPLATE LITERAL CALCULATION");
-let price = 500;
-let quantity = 4;
-console.log(`Total cost is ${price * quantity}`);
+// TASK 4 – FIND STUDENT
+console.log('TASK 4 – FIND STUDENT');
+let students = [
+{ id: 1, name: "Arun", mark: 75 },
+{ id: 2, name: "Priya", mark: 90 },
+{ id: 3, name: "Kumar", mark: 65 }
+];
+const findStudent=students.find((e)=>{
+    return e.mark>80;
+})
+console.log(findStudent);
 
-// TASK 5 – DEFAULT PARAMETER
-console.log("TASK 5 – DEFAULT PARAMETER");
-function greet(name = "Guest") {
-    console.log(`Welcome ${name}`);
+// TASK 7 – CALCULATE TOTAL
+console.log('TASK 7 – CALCULATE TOTAL');
+let prices = [100, 200, 300, 400];
+const total=prices.reduce((i,e)=>{
+    return i+e
+},0)
+console.log(total);
+
+// TASK 8 – CHECK PASS STATUS
+console.log('TASK 8 – CHECK PASS STATUS');
+let marks = [75, 80, 35, 90, 65];
+let Failed = marks.some(mark => (mark < 40));
+let Passed = marks.every(mark => (mark >= 35));
+console.log(Failed);
+console.log(Passed);
+
+// TASK 9 – FOR...OF
+console.log('TASK 9 – FOR...OF');
+let skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React"
+];
+for (let skill of skills) {
+    console.log(skill);
 }
-greet("Arun");
-greet();
-
-// TASK 6 – ARRAY DESTRUCTURING
-console.log("TASK 6 – ARRAY DESTRUCTURING");
-const colors = ["Red","Green","Blue"];
-const [first, second, third] = colors;
-console.log(first);
-console.log(second);
-console.log(third);
-
-// TASK 7 – OBJECT DESTRUCTURING
-console.log("TASK 7 – OBJECT DESTRUCTURING");
-const student = {
-    Sname: "Arun",
-    Sage: 20,
-    city: "Chennai"
-};
-
-const { Sname, Sage, city } = student;
-console.log(Sname);
-console.log(Sage);
-console.log(city);
-
-// TASK 8 – SPREAD
-console.log("TASK 8 – SPREAD");
-const numbers = [10, 20, 30];
-const newNumbers = [...numbers, 40, 50];
-console.log(newNumbers);
-
-// TASK 9 – REST
-console.log("TASK 9 – REST");
-function showNumbers(...numbers) {
-    console.log(numbers);
-}
-showNumbers(10, 20, 30, 40);
-
-// TASK 10 – ARROW FUNCTION
-console.log("TASK 10 – ARROW FUNCTION");
-const add = (a, b) => {
-    return a + b;
-};
-console.log(add(10, 20));
